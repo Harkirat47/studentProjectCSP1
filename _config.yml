@@ -12,6 +12,7 @@ baseurl: "/student"
 theme: minima
 
 plugins:
-- jekyll-seo-tag
-- jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+
 future: true
