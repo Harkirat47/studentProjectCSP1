@@ -30,7 +30,7 @@ Here are some of my favorite things to discuss not including CS or academics.
 
 ## Link To my favorite youtuber
 
-[Subscribe to Technoblade](https://43edqwww.youtube.com/channel/UCFAiFyGs6oDiF1Nf-rRJpZA)
+[Subscribe to Technoblade](https://www.youtube.com/@Technoblade)
 
 ## My favorite youtube video
 
