@@ -2,22 +2,17 @@
 toc: true
 comments: true
 layout: post
-title: Review Ticket
+title: Lab Notebook week 1
 description: Example Review Ticket!!! This will help us communicate results.
 type: tangibles
 courses: { csp: {week: 1} }
 ---
 
 ### Summary of Accomplishments
-> Update Blog to contain all hacks.  
-- Reviewed with Pair.  Discuss/Show evidence.
-- Discuss laptop, cloud computer.
-- Discuss tools setup and troubles.
-- Show personal blog / home page.
-- Show how you are maintaining notes, answering hacks, and showing tangibles.  
-- How have you learned Markdown, HTML, CSS, JavaScript.
-- Show Jupyter Notebooks and how you have added and organized them in the blog.
-- Show evidence of using Slack Account, show app installed on Laptop and/or phone.  Show awared of #annoncements, #general, #coding.
-- Run make commands to build and test blog locally, before pushing changes to GitHub pages.
-- Discuss GitHub Account, show ability to push/pull changes from VSCode.
-- Discuss development on Themes, show how you plan to organized lab notebook.
+> accomplishments  
+    [] Installed Minima theme from Gemfile
+    [] Added Java calculator and learned about notebooks and codeblocks
+    [] Ran into error with make file, fixed with commenting out 
+    [] Changed the header file to make cool navbar
+    [] Added embeded links and videos
+    [] ran into a problem for getting non-embeded youtube videos.

@@ -1,10 +1,10 @@
 ---
 toc: true
 comments: true
-layout: post
-title: Lab Notebook week 2
+layout: page
+title: Snakegame
 description: weekly plan for week 2 
-type: plans
+type: hacks
 courses: {csp: {week: 2}}
 ---
 
