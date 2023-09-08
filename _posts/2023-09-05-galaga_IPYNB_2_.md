@@ -19,7 +19,7 @@ from io import BytesIO
 pygame.init()
 
 # Constants
-SCREEN_WIDTH, SCREEN_HEIGHT = 800, 600
+SCREEN_WIDTH, SCREEN_HEIGHT = 1700, 900
 PLAYER_SPEED = 10
 ENEMY_SPEED = 2
 ENEMY_SIZE = (50, 50)
@@ -31,7 +31,7 @@ DIFFICULTY_INCREASE_INTERVAL = 3600
 
 # Create the screen
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption("Galaga Clone")
+pygame.display.set_caption("Cosmic Conquest")
 
 # Function to load an image from a URL and resize it
 def load_and_resize_image_from_url(url, size):
@@ -203,9 +203,17 @@ sys.exit()
 ```
 
 
-    An exception has occurred, use %tb to see the full traceback.
+    ---------------------------------------------------------------------------
+
+    ValueError                                Traceback (most recent call last)
+
+    /tmp/ipykernel_661/298794211.py in <module>
+        131         for enemy in enemies:
+        132             if bullet.colliderect(enemy):
+    --> 133                 bullets.remove(bullet)
+        134                 enemies.remove(enemy)
+        135                 score += 1
 
 
-    SystemExit
-
+    ValueError: list.remove(x): x not in list
 
