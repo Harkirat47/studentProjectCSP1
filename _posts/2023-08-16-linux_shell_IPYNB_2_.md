@@ -598,7 +598,7 @@ cat sample.txt
 
 # Define a variable with new content
 new_content="This is the updated content of the file."
-
+            
 # Write the new content to the file
 echo "$new_content" > sample.txt
 
