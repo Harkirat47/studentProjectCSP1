@@ -248,11 +248,233 @@ console.log(titleElement.innerHTML)
 
 ```python
 %%html
-<!-- html code goes here (make sure to run) -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant Webpage Example</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    <style>
+        /* Reset some default styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
 
-<script>
-  // your javascript code goes here
-</script>
+        /* Style for the navbar */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        /* Style for navbar links */
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Hover effect for navbar links */
+        .navbar a:hover {
+            background-color: #555;
+            color: white;
+            transform: scale(1.1); /* Scale effect on hover */
+        }
+
+        /* Style for navbar buttons */
+        .navbar .btn {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Hover effect for navbar buttons */
+        .navbar .btn:hover {
+            background-color: #45a049;
+            transform: scale(1.1) rotate(10deg); /* Scale and rotate effect on hover */
+        }
+
+        /* Style for dropdown menu */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* Style for dropdown button */
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            background-color: inherit;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            padding: 14px 16px;
+        }
+
+        /* Hover effect for dropdown button */
+        .dropdown .dropbtn:hover {
+            background-color: #555;
+            color: white;
+            transform: scale(1.1); /* Scale effect on hover */
+        }
+
+        /* Style for dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Style for dropdown links */
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Hover effect for dropdown links */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+            transform: rotate(-5deg); /* Rotate effect on hover */
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Style for the paragraph */
+        .content {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: white; /* White background for content */
+        }
+
+        /* Additional links and buttons */
+        .additional-content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .additional-content a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #3498db; /* Vibrant button color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Hover effect for additional links */
+        .additional-content a:hover {
+            background-color: #2980b9; /* Darker button color on hover */
+            transform: scale(1.2) rotate(15deg); /* Scale and rotate effect on hover */
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="https://www.microsoft.com">Microsoft</a>
+        <a href="https://www.apple.com">Apple</a>
+        <div class="dropdown">
+            <button class="dropbtn">Services</button>
+            <div class="dropdown-content">
+                <a href="https://www.amazon.com">Amazon</a>
+                <a href="https://www.grammarly.com">Grammarly</a>
+                <a href="#">Service 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">More</button>
+            <div class="dropdown-content">
+                <a href="https://www.youtube.com">YouTube</a>
+                <a href="https://www.google.com">Google</a>
+                <a href="https://www.openai.com">OpenAI</a>
+            </div>
+        </div>
+        <a href="https://www.python.org">Python</a>
+        <a href="https://www.java.com">Java</a>
+        <button class="btn" onclick="shuffleLinksAndButtons()">Shuffle</button>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <p>This is some content below the navbar.</p>
+    </div>
+
+    <!-- Additional Links and Buttons -->
+    <div class="additional-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <button onclick="showAlert()" class="btn">Button 1</button>
+        <button onclick="showAlert()" class="btn">Button 2</button>
+    </div>
+
+    <script>
+        // Function to shuffle the links and buttons randomly
+        function shuffleLinksAndButtons() {
+            // Get all the links and buttons
+            const linksAndButtons = document.querySelectorAll('.navbar a, .dropdown-content a, .additional-content a, .navbar .btn, .additional-content .btn');
+
+            // Convert NodeList to an array
+            const linksAndButtonsArray = Array.from(linksAndButtons);
+
+            // Shuffle the array randomly
+            shuffleArray(linksAndButtonsArray);
+
+            // Update the DOM with the shuffled links and buttons
+            linksAndButtonsArray.forEach((element, index) => {
+                // Replace the content of the original elements with shuffled elements
+                linksAndButtons[index].textContent = element.textContent;
+                linksAndButtons[index].setAttribute('href', element.getAttribute('href'));
+            });
+        }
+
+        // Function to show an alert when a button is clicked
+        function showAlert() {
+            alert("Button clicked!");
+        }
+
+        // Fisher-Yates shuffle algorithm
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+    </script>
+</body>
 ```
 
 

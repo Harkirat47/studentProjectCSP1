@@ -279,5 +279,65 @@ Create a JavaScript snippet below with the following requirements:
 
 ```python
 %%js
-// put your javascript code here (make sure to run it and check your outputs in the console)
+   // Create an object representing yourself
+const person = {
+    name: "Harkirat",
+    age: 15,
+    currentClasses: ["Calculus", "Computer Science"],
+    interests: ["Coding", "Hiking", "Music"],
+    favoriteBooks: [
+        { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
+        { title: "To Kill a Mockingbird", author: "Harper Lee" }
+    ],
+    currentLocation: {
+        city: "San Diego",
+        country: "USA"
+    }
+};
+
+// Print the entire object
+console.log("Original Object:");
+console.log(person);
+
+// Manipulate the arrays within the object
+person.age += 1; // Increment age
+person.currentClasses.push("Data Science"); // Add a new class
+person.interests.pop(); // Remove the last interest
+
+// Print the entire object after manipulation
+console.log("\nObject after Manipulation:");
+console.log(person);
+
+// Perform mathematical operations on fields
+const ageInFiveYears = person.age + 5;
+const halfAge = person.age / 2;
+const moduloAge = person.age % 2;
+
+console.log("\nMathematical Operations:");
+console.log(`In five years, I'll be ${ageInFiveYears} years old.`);
+console.log(`Half of my age is ${halfAge}.`);
+console.log(`My age modulo 2 is ${moduloAge}.`);
+
+// Use typeof to determine the types of fields
+const ageType = typeof person.age;
+const interestsType = typeof person.interests;
+const locationType = typeof person.currentLocation;
+
+console.log("\nData Types:");
+console.log(`The data type of 'age' is ${ageType}.`);
+console.log(`The data type of 'interests' is ${interestsType}.`);
+console.log(`The data type of 'currentLocation' is ${locationType}.`);
+
+// Access a nested object property
+const cityName = person.currentLocation.city;
+console.log(`\nCurrent city: ${cityName}`);
+
+// Modify a nested object property
+person.currentLocation.city = "San Francisco";
+
+// Print the object with the modified nested property
+console.log("\nObject after Modifying Nested Property:");
+console.log(person);
+
+
 ```

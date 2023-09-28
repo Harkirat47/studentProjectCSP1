@@ -200,8 +200,8 @@ permalink: /basics/home
     <div class="additional-content">
         <a href="#">Link 1</a>
         <a href="#">Link 2</a>
-        <button onclick="showAlert()" class="btn">Button 1</button>
-        <button onclick="showAlert()" class="btn">Button 2</button>
+        <button onclick="alert('button is clicked')" class="btn" href = "amazon.com"> Button 1</button>
+        <button onclick="showAlert()" class="btn"  href = "#"> button 2 </button>
     </div>
 
     <script>
@@ -209,6 +209,21 @@ permalink: /basics/home
         function showAlert() {
             alert("Button clicked!");
         }
+        function switchButtons() {
+            var button1 = document.querySelector('.additional-content button:nth-child(3)');
+            var button2 = document.querySelector('.additional-content button:nth-child(4)');
+            
+            // Clone Button 1 and Button 2
+            var button1Clone = button1.cloneNode(true);
+            var button2Clone = button2.cloneNode(true);
+
+            // Replace Button 1 with Button 2
+            button1.parentNode.replaceChild(button2Clone, button1);
+            // Replace Button 2 with Button 1
+            button2.parentNode.replaceChild(button1Clone, button2);}
+
+        showAlert();
+        switchButtons();
     </script>
 </body>
 
@@ -406,8 +421,8 @@ permalink: /basics/home
     <div class="additional-content">
         <a href="#">Link 1</a>
         <a href="#">Link 2</a>
-        <button onclick="showAlert()" class="btn">Button 1</button>
-        <button onclick="showAlert()" class="btn">Button 2</button>
+        <button onclick="alert('button is clicked')" class="btn" href = "amazon.com"> Button 1</button>
+        <button onclick="showAlert()" class="btn"  href = "#"> button 2 </button>
     </div>
 
     <script>
@@ -415,6 +430,21 @@ permalink: /basics/home
         function showAlert() {
             alert("Button clicked!");
         }
+        function switchButtons() {
+            var button1 = document.querySelector('.additional-content button:nth-child(3)');
+            var button2 = document.querySelector('.additional-content button:nth-child(4)');
+
+            // Clone Button 1 and Button 2
+            var button1Clone = button1.cloneNode(true);
+            var button2Clone = button2.cloneNode(true);
+
+            // Replace Button 1 with Button 2
+            button1.parentNode.replaceChild(button2Clone, button1);
+            // Replace Button 2 with Button 1
+            button2.parentNode.replaceChild(button1Clone, button2);}
+
+        showAlert();
+        switchButtons();
     </script>
 </body>
 
@@ -427,16 +457,16 @@ permalink: /basics/home
 %%js
    // Create an object representing yourself
 const person = {
-    name: "John Doe",
-    age: 30,
-    currentClasses: ["Mathematics", "Computer Science"],
+    name: "Harkirat",
+    age: 15,
+    currentClasses: ["Calculus", "Computer Science"],
     interests: ["Coding", "Hiking", "Music"],
     favoriteBooks: [
         { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
         { title: "To Kill a Mockingbird", author: "Harper Lee" }
     ],
     currentLocation: {
-        city: "New York",
+        city: "San Diego",
         country: "USA"
     }
 };
