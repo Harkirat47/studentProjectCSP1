@@ -187,5 +187,9 @@ var item = "burger"
 console.log(total)
 ```
 
+
+    <IPython.core.display.Javascript object>
+
+
 ## Hacks
 - Fix the errors in the first three segments in this notebook and say what you changed in the code cell under "What I Changed" (Challenge is optional)

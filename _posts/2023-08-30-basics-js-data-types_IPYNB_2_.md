@@ -32,6 +32,10 @@ console.log("string concatenation: hello + Rohan!")
 console.log(hello + " Rohan!")
 ```
 
+
+    <IPython.core.display.Javascript object>
+
+
 ## .substring()
 
 
@@ -49,6 +53,10 @@ console.log("substring: hello 0, 5")
 console.log(hello.substring(0, 5))
 ```
 
+
+    <IPython.core.display.Javascript object>
+
+
 ## .toUpperCase() and .toLowerCase()
 
 
@@ -63,6 +71,10 @@ console.log("string convert to lower case: hello toLowerCase")
 console.log(hello.toLowerCase())
 ```
 
+
+    <IPython.core.display.Javascript object>
+
+
 ## .includes()
 
 
@@ -76,6 +88,10 @@ console.log(hello.includes("Rohan"))
 console.log("string includes: hello includes Hello")
 console.log(hello.includes("Hello"))
 ```
+
+
+    <IPython.core.display.Javascript object>
+
 
 # number datatype
 - we discussed that numbers store numbers
@@ -109,6 +125,10 @@ console.log("remainder (modulo): num1 % num2")
 console.log(num1 % num2)
 ```
 
+
+    <IPython.core.display.Javascript object>
+
+
 # number formatting
 
 
@@ -134,6 +154,10 @@ console.log("set decimals to 2 places (num1 / num2)")
 console.log((num1 / num2).toFixed(2))
 ```
 
+
+    <IPython.core.display.Javascript object>
+
+
 # Array datatype
 - an array is just a list of other datatypes
 - put all the items in square brackets
@@ -155,6 +179,10 @@ console.log("Array: referencing a cell #1")
 console.log([ arr_data[1] ])  // zero based counting: 1 is 2nd cell
 
 ```
+
+
+    <IPython.core.display.Javascript object>
+
 
 # array manipulation
 
@@ -182,6 +210,10 @@ console.log("Array: removing from end of list")
 arr_data.pop()
 console.log(arr_data)
 ```
+
+
+    <IPython.core.display.Javascript object>
+
 
 # Object datatype
 
@@ -213,6 +245,10 @@ console.log(obj);
 // -> { name: 'Safin', age: 13 }
 // Notice that single quotes ' and double quotes " can be used interchangeably
 ```
+
+
+    <IPython.core.display.Javascript object>
+
 
 # object access
 
@@ -341,3 +377,7 @@ console.log(person);
 
 
 ```
+
+
+    <IPython.core.display.Javascript object>
+

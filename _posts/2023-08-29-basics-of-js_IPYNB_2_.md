@@ -159,7 +159,7 @@ console.log("name1 == name2", name1 == name2)
 
 // changing the value of name1 and repeat compare
 console.log("String Comparison after change")
-name1 = "John"
+name1 = "John"  // reassign
 console.log("name1", name1)
 console.log("name2", name2)
 console.log("name1 == name2", name1 == name2)
