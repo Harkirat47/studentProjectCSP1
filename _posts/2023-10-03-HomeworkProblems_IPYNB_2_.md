@@ -7,6 +7,10 @@ type: hacks
 courses: {'csp': {'week': 4}}
 ---
 
+### Problem 1
+- Two airplanes are in a race, your job is to make a plane name list, append the name value to the participents  then make a variable that pulls the distance covered for each plane. in the end, in the curly brackets print the name of the plane, add more variables with curly brackets. 
+
+
 ```python
 # Define a list of airplane race participants
 participants = [
@@ -26,6 +30,11 @@ winner = max(participants, key=lambda x: x["distance_covered"])
 print(f"The winner of the airplane race is {winner['name']} in the '{winner['plane']}' with a distance of {winner['distance_covered']} miles!")
 
 ```
+
+### Problem 2
+- Add more participants , in the loop, add a tricks variable that gets data from participants list
+    score = tricks * 10  # Each trick is worth 10 points
+    add a score and add it to a score in the list ex list[score] = score
 
 
 ```python
@@ -52,90 +61,7 @@ for participant in participants:
 print(f"The winner of the dog show is {winner['name']} points!")
 ```
 
-
-```python
-import random
-
-class IceCreamShop:
-    def __init__(self, name):
-        self.name = "your code here" # name is a variable in the function
-        self.rating = random.uniform("your code here", "your code here")  # Randomly generate a rating between 3.0 and 5.0
-        self.price_per_scoop = random.uniform("your code here", "your code here")  # Randomly generate a price per scoop between 1.0 and 3.0
-        self.distance = random.uniform("your code here", "your code here")  # Randomly generate a distance between 0.1 and 10.0 miles from the client
-    
-    def calculate_score(self):
-        # Calculate a score based on a weighted combination of rating, price, and distance
-        rating_weight = 0.4
-        price_weight = 0.3
-        distance_weight = 0.3
-        score = " your code here"
-        return score
-    
-def select_contract_winner(shops):
-    # Select the ice cream shop with the highest score as the contract winner
-    winner = max(shops, key=lambda shop: shop.calculate_score())
-    return winner
-
-if __name__ == "__main__":
-    # Create a list of 10 ice cream shops
-    ice_cream_shops = [IceCreamShop(f"Shop {i+1}") for i in range(10)]
-
-    #hint, try putting something inside the brackets before this for loop, it is worth an extra point[ for i in range(10)]
-
-    # Select the contract winner
-    contract_winner = select_contract_winner(ice_cream_shops)
-
-    print(f"The contract is awarded to {contract_winner.name}")
-    print(f"Rating: {contract_winner.rating}")
-    print(f"Price per scoop: ${contract_winner.price_per_scoop:.2f}")
-    print(f"Distance from client: {contract_winner.distance:.2f} miles")
-
-```
-
-
-```python
-# Define a class representing a Bank Account
-class BankAccount:
-    def __init__(self, account_holder, balance=0):
-        self.account_holder = account_holder
-        self.balance = balance
-
-    def deposit(self, amount):
-        if amount > 0:
-            self.balance += amount
-            print(f"Deposited ${amount}. New balance: ${self.balance}")
-        else:
-            print("Invalid deposit amount.")
-
-    def withdraw(self, amount):
-        if 0 < amount <= self.balance:
-            self.balance -= amount
-            print(f"Withdrew ${amount}. New balance: ${self.balance}")
-        else:
-            print("Invalid withdrawal amount or insufficient funds.")
-
-    def get_balance(self):
-        return self.balance
-
-    def __str__(self):
-        return f"Account holder: {self.account_holder}, Balance: ${self.balance}"
-
-
-# Create two bank accounts
-account1 = BankAccount("Alice", 1000)
-account2 = BankAccount("Bob", 500)
-
-# Perform some transactions
-account1.deposit(500)
-account1.withdraw(200)
-account2.deposit(1000)
-account2.withdraw(800)
-
-# Display account information
-print("Account 1:", account1)
-print("Account 2:", account2)
-
-```
+this problem, were making a bank account, you just have to know what to do to add all of the functions to change the variables
 
 
 ```python
@@ -183,6 +109,9 @@ print("Noah Account", noahAccount)
 
 ```
 
+### add more regions
+
+
 
 ```python
 import random
@@ -229,6 +158,17 @@ print(f"- Infrastructure Quality: {best_region['infrastructure_quality']:.2f}")
 
 ```
 
+### problem final
+
+- make an empty list and dictionary
+- add data in all of the given simple loops, so that this problem runs its print functions without error
+- this one is hard, try very hard, a heartfelt atempt, like all of the code done with minor issues is still full credit
+
+try to understand this problem, it has lots of data abstractions
+
+data is given on the bottem and a function is calling it IMPORTANT!!!
+
+
 
 ```python
 def simulate_data_structure(data):
@@ -273,5 +213,81 @@ data = [
 
 result = simulate_data_structure(data)
 print(result)
+
+```
+
+
+```python
+ingredients = ["butter", "white sugar", "light brown sugar", "vanilla extract", "eggs", "flour", "chocolate chips", "baking soda", "salt", "baking powder"]
+# Print this list
+
+# << CODE >>
+
+
+# Create a list called bowl
+# Your list must include:
+# "flour"
+# "baking soda"
+# "salt"
+# "baking powder"
+# When creating this list, make sure to remove these items from the "ingredients" list!
+# Print your list
+
+# << CODE >>
+
+# Create a list called cream
+# Include:
+# "butter"
+# "white sugar"
+# "light brown sugar"
+# "vanilla extract"
+# "eggs"
+# When creating this list, make sure to remove these items from the "ingredients" list!
+# Print your list
+
+# << CODE >>
+
+# Create a list called "dough"
+# Combine the bowl list and cream list together
+# Print your list
+
+# << CODE >>
+
+# Append chocolate chips to the dough list and remove it from the ingredients list
+# Print the list
+
+# << CODE >>
+
+# Create a string that says "Now roll the dough into balls and place them on cookie sheets!"
+# Print it
+
+# << CODE >>
+
+# Create an int called temperature and set it to 375
+# Print "Place in a <<your integer goes here>> F oven for 8-10 minutes and remove just before they start to turn brown."
+
+# << CODE >>
+
+# Create an int called "cool down" using pascal case and set it to 2
+# Print "Let them sit on the baking pan for <<your integer goes here>> minutes before removing to cooling rack."
+
+# << CODE >>
+
+# Create 5 string (use whatever casing you feel)
+# First string should be "Enjoy"
+# Second string should be "your"
+# Third string should be "CHOCOLATE"
+# Fourth string should be "CHIP"
+# Fifth string should be "COOKIES!!!"
+# Using ONE print statement, print ALL of these variables (with a space between each)
+
+# << CODE >>
+
+# JSON CHALLENGE
+# can your do the whole project by using a JSON list?
+# can you convert it to a python dictionary and do all these steps?
+
+# Yes this is a real cookie recipe. You can find it below if you wanna make them! :)
+# https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/
 
 ```
