@@ -2,24 +2,24 @@
 toc: True
 comments: False
 layout: post
-title: None
-type: None
+title: Homework problems Data Abstractions
+type: hacks
 courses: {'csp': {'week': 4}}
 ---
 
 ```python
 # Define a list of airplane race participants
 participants = [
-    {"name": "Ace", "plane": "Bed Baron", "distance_covered": 1200},
-    {"name": "Bushawn Bal", "plane": "The Biggest Bird", "distance_covered": 1500},
-    # Add more participants here
+    {"name": "Billium Bang", "plane": "Red Rocket", "distance_covered": 1200},
+    {"name": "Bushawn Bal", "plane": "The Biggest Bird", "distance_covered": 1500}
 ]
 
 # Calculate the total distance covered by each pilot during the race
 for participant in participants:
-    plane_name = participant["plane"]
-    distance_covered = participant["distance_covered"]
-    print(f"{participant['name']} in the '{plane_name}' covered {distance_covered} miles.")
+    
+    #your code here
+
+    print(f" what happens, print here, use {null} to insert variables")
 
 # Determine the winner
 winner = max(participants, key=lambda x: x["distance_covered"])
@@ -27,26 +27,19 @@ print(f"The winner of the airplane race is {winner['name']} in the '{winner['pla
 
 ```
 
-    Ace in the 'Bed Baron' covered 1200 miles.
-    Bushawn Bal in the 'The Biggest Bird' covered 1500 miles.
-
-
 
 ```python
 # Define a list of dog show participants
 participants = [
     {"name": "Fido", "breed": "Golden Retriever", "tricks": 4},
-    {"name": "Rex", "breed": "German Shepherd", "tricks": 6},
-    {"name": "Spot", "breed": "Dalmatian", "tricks": 5},
-    {"name": "Luna", "breed": "Labrador Retriever", "tricks": 3},
     # Add more dog participants here
 ]
 
 # Calculate the scores for each dog based on the number of tricks they can perform
 for participant in participants:
-    tricks = participant["tricks"]
+    #your code here
     score = tricks * 10  # Each trick is worth 10 points
-    participant["score"] = score
+    #your code here
 
 # Determine the winning dog
 winner = max(participants, key=lambda x: x["score"])
@@ -54,19 +47,10 @@ winner = max(participants, key=lambda x: x["score"])
 # Display the dog show results
 print("Dog Show Results:")
 for participant in participants:
-    print(f"{participant['name']} ({participant['breed']}): {participant['score']} points")
+    print(f"{null} your code here!")
 
-print(f"The winner of the dog show is {winner['name']} ({winner['breed']}) with {winner['score']} points!")
-
+print(f"The winner of the dog show is {winner['name']} points!")
 ```
-
-    Dog Show Results:
-    Fido (Golden Retriever): 40 points
-    Rex (German Shepherd): 60 points
-    Spot (Dalmatian): 50 points
-    Luna (Labrador Retriever): 30 points
-    The winner of the dog show is Rex (German Shepherd) with 60 points!
-
 
 
 ```python
@@ -74,17 +58,17 @@ import random
 
 class IceCreamShop:
     def __init__(self, name):
-        self.name = name
-        self.rating = random.uniform(3.0, 5.0)  # Randomly generate a rating between 3.0 and 5.0
-        self.price_per_scoop = random.uniform(1.0, 3.0)  # Randomly generate a price per scoop between 1.0 and 3.0
-        self.distance = random.uniform(0.1, 10.0)  # Randomly generate a distance between 0.1 and 10.0 miles from the client
+        self.name = "your code here" # name is a variable in the function
+        self.rating = random.uniform("your code here", "your code here")  # Randomly generate a rating between 3.0 and 5.0
+        self.price_per_scoop = random.uniform("your code here", "your code here")  # Randomly generate a price per scoop between 1.0 and 3.0
+        self.distance = random.uniform("your code here", "your code here")  # Randomly generate a distance between 0.1 and 10.0 miles from the client
     
     def calculate_score(self):
         # Calculate a score based on a weighted combination of rating, price, and distance
         rating_weight = 0.4
         price_weight = 0.3
         distance_weight = 0.3
-        score = (self.rating * rating_weight) + (self.price_per_scoop * price_weight) - (self.distance * distance_weight)
+        score = " your code here"
         return score
     
 def select_contract_winner(shops):
@@ -96,6 +80,8 @@ if __name__ == "__main__":
     # Create a list of 10 ice cream shops
     ice_cream_shops = [IceCreamShop(f"Shop {i+1}") for i in range(10)]
 
+    #hint, try putting something inside the brackets before this for loop, it is worth an extra point[ for i in range(10)]
+
     # Select the contract winner
     contract_winner = select_contract_winner(ice_cream_shops)
 
@@ -105,12 +91,6 @@ if __name__ == "__main__":
     print(f"Distance from client: {contract_winner.distance:.2f} miles")
 
 ```
-
-    The contract is awarded to Shop 10
-    Rating: 4.592747430429002
-    Price per scoop: $2.80
-    Distance from client: 0.38 miles
-
 
 
 ```python
@@ -252,39 +232,33 @@ print(f"- Infrastructure Quality: {best_region['infrastructure_quality']:.2f}")
 
 ```python
 def simulate_data_structure(data):
-    city_data = {}  # Dictionary to store city data
-    city_stats = []  # List to store city statistics
+    # Dictionary to store city data must be blank
+     # List to store city statistics also blank
 
     for person in data:
-        name = person["name"]
-        age = person["age"]
-        city = person["city"]
+        name = person[]
+        age = person[]
+        city = person[]
 
         # 1. Create a dictionary of city data
         if city not in city_data:
-            city_data[city] = {"names": [], "total_age": 0, "total_people": 0}
+            city_data[city] = {"names": [], "total_age": 0, "total_people": 0} # reduces err
 
-        city_data[city]["names"].append(name)  # Add the name to the city's list
-        city_data[city]["total_age"] += age  # Add the age to the city's total age
-        city_data[city]["total_people"] += 1  # Increment the total people count
+        city_data[city]["names"]# Add the name to the city's list
+        city_data[city]["total_age"] # Add the age to the city's total age hint , use +=
+        city_data[city]["total_people"]  # Increment the total people count hint , use +=
 
     for city, city_info in city_data.items():
         # 2. Calculate the average age for each city
-        average_age = city_info["total_age"] / city_info["total_people"]
+        average_age = city_info["what goes in here?"] / city_info["what goes in here?"]
         city_info["average_age"] = round(average_age, 2)  # Round to 2 decimal places
 
         # 3. Create a dictionary for city statistics
-        city_stats.append(
-            {
-                "city": city,
-                "total_people": city_info["total_people"],
-                "average_age": city_info["average_age"],
-            }
-        )
+        city_stats. #your code after the dot, what happens here, how do u apend a dictionary???
 
     # Add the city statistics under the "Statistics" key
     city_data["Statistics"] = city_stats
-    
+
     return city_data
 
 
@@ -301,6 +275,3 @@ result = simulate_data_structure(data)
 print(result)
 
 ```
-
-    {'New York': {'names': ['Alice', 'Charlie'], 'total_age': 47, 'total_people': 2, 'average_age': 23.5}, 'Los Angeles': {'names': ['Bob', 'David'], 'total_age': 65, 'total_people': 2, 'average_age': 32.5}, 'Chicago': {'names': ['Eve'], 'total_age': 28, 'total_people': 1, 'average_age': 28.0}, 'Statistics': [{'city': 'New York', 'total_people': 2, 'average_age': 23.5}, {'city': 'Los Angeles', 'total_people': 2, 'average_age': 32.5}, {'city': 'Chicago', 'total_people': 1, 'average_age': 28.0}]}
-
