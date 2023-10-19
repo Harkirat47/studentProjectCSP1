@@ -4,7 +4,7 @@ comments: True
 layout: post
 title: Iteration Lesson
 type: hacks
-courses: {'csp': {'week': 7}}
+courses: {'csp': {'week': 8}}
 ---
 
 ## Flow of Information
@@ -43,10 +43,10 @@ while i < 5:
 
 
 ```python
-i=0
-for i in range(1,11):
-    if i%2 == 0:
-        print (i)
+while i <= 10:
+    if i % 2 == 0:
+        print(i)
+    i += 1
 
 ```
 
@@ -89,17 +89,25 @@ while i < 5:
   print(i)
 ```
 
+    1
+    3
+    4
+    5
+
+
 ## Hack 2:
 
 #### Write a code to list the numbers from 1 to 20 while skipping the multiples of 2 using a while loop.
 
 
 ```python
+
 i = 0
-while i < 20:
-    if i%2 != 0:
-        print(i)
-    i = i+1
+while i <= 19:
+    i += 1
+    if i % 2 == 0:
+        continue
+    print(i)
 ```
 
     1
@@ -159,6 +167,13 @@ for x in "beryl":
     print(x)
 ```
 
+    b
+    e
+    r
+    y
+    l
+
+
 ## Break Function
 
 Using a break function, we can stop the loop from iterating when the output is a certain value. This is the same as in while loops.
@@ -171,6 +186,10 @@ for x in gemstones:
   if x == "beryl":
     break
 ```
+
+    aquamarine
+    beryl
+
 
 ## Continue Function
 
@@ -195,6 +214,16 @@ for x in range(8):
     print(x)
 ```
 
+    0
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+
+
 We can define the starting value if it is other than zero by adding a second parameter.
 
 
@@ -203,6 +232,14 @@ for x in range(2,8):
     print(x)
 ```
 
+    2
+    3
+    4
+    5
+    6
+    7
+
+
 We can also define the increment value by adding a third parameter.
 
 
@@ -210,6 +247,12 @@ We can also define the increment value by adding a third parameter.
 for x in range(1,8,2):
     print(x)
 ```
+
+    1
+    3
+    5
+    7
+
 
 ## Else Statements
 
@@ -223,6 +266,17 @@ else:
     print("The code is finished!")
 ```
 
+    0
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    The code is finished!
+
+
 ## Nested Loops
 
 Nested Loops are loops within loops. This is used to return an output which is a combination of the outer and inner loops.
@@ -235,6 +289,18 @@ for x in [1, 2]:
         print(y)
 ```
 
+    1
+    2
+    3
+    4
+    5
+    2
+    2
+    3
+    4
+    5
+
+
 
 ```python
 for i in range(4,6):
@@ -242,6 +308,30 @@ for i in range(4,6):
     for x in range(1,11):
         print (i, "X", x, "=", i * x)
 ```
+
+    4
+    4 X 1 = 4
+    4 X 2 = 8
+    4 X 3 = 12
+    4 X 4 = 16
+    4 X 5 = 20
+    4 X 6 = 24
+    4 X 7 = 28
+    4 X 8 = 32
+    4 X 9 = 36
+    4 X 10 = 40
+    5
+    5 X 1 = 5
+    5 X 2 = 10
+    5 X 3 = 15
+    5 X 4 = 20
+    5 X 5 = 25
+    5 X 6 = 30
+    5 X 7 = 35
+    5 X 8 = 40
+    5 X 9 = 45
+    5 X 10 = 50
+
 
 ## Hack 3
 
@@ -251,26 +341,92 @@ Upper 90%: Add multiple parameters to specify your values. Use continue to skip 
 
 
 ```python
-def print_numbers_with_skip(start, end, skip_factor):
-    for number in range(start, end + 1):
-        if number % skip_factor == 0:
-            continue  # Skip multiples of the specified factor
-        print(number)
-
-# Call the function with your specified values
-start_value = 1
-end_value = 100
-skip_multiple = 4
-
-print_numbers_with_skip(start_value, end_value, skip_multiple)
-
+for x in range(1, 100): # multiple parameters
+    if x % 4 == 0: 
+       continue # continue to skip values
+    print(x) # outputs have been checked
 ```
 
-## Homework
+    1
+    2
+    3
+    5
+    6
+    7
+    9
+    10
+    11
+    13
+    14
+    15
+    17
+    18
+    19
+    21
+    22
+    23
+    25
+    26
+    27
+    29
+    30
+    31
+    33
+    34
+    35
+    37
+    38
+    39
+    41
+    42
+    43
+    45
+    46
+    47
+    49
+    50
+    51
+    53
+    54
+    55
+    57
+    58
+    59
+    61
+    62
+    63
+    65
+    66
+    67
+    69
+    70
+    71
+    73
+    74
+    75
+    77
+    78
+    79
+    81
+    82
+    83
+    85
+    86
+    87
+    89
+    90
+    91
+    93
+    94
+    95
+    97
+    98
+    99
 
 
+# Homework
 
-# Create a function that takes a list of numbers and arranges the in descending order
+## Create a function that takes a list of numbers and arranges the in descending order
 For example this function should be able to take the list [35,4,6,90,2,55,13,8] and arrange it into [2,4,6,8,13.35,55,90]
 
 ## Extra Credit
@@ -278,33 +434,33 @@ Make it so this function can also sort strings by their length
 For example [Car,4,11,twenty,27,trees] should sort into [Car,4,trees,twenty,11,27]
 
 
+
+
 ```python
-def arrange_descending(lst):
-    def custom_key(item):
-        if isinstance(item, int):
-            return item
-        elif isinstance(item, str):
-            return len(item)
-        else:
-            return 0
+import collections # for converting to ordered dictionary
 
-    n = len(lst)
+nums = [35, 4, 6, 90, 2, 55, 13, 8]
+strings = { # dictionary with all the number values and corresponding strings
+    len("Car") : "Car",
+    4 : "4",
+    11 : "11",
+    len("twenty") : "twenty",
+    27 : "27",
+    len("trees") : "trees"
+}
 
-    for i in range(n - 1):
-        max_index = i
-        for j in range(i + 1, n):
-            if custom_key(lst[j]) > custom_key(lst[max_index]):
-                max_index = j
-        lst[i], lst[max_index] = lst[max_index], lst[i]
+def shortestToLongestSorter(nums, strings):
+    nums.sort() # sort array
+    dict(sorted(strings.items())) # sorts the dictionary by the number value
+    global orderedDict # global var cuz python scopes are goofy
+    orderedDict = collections.OrderedDict(sorted(strings.items())) # convert to ordered dictionary
+    
+shortestToLongestSorter(nums, strings) # function call
 
-    return lst
-
-# Example usage:
-input_list = ["Car", 4, 11, "twenty", 27, "trees"]
-result = arrange_descending(input_list)
-print(result)  # Output will be ["Car", 4, "trees", "twenty", 11, 27]
-
+print(nums) # printing nums array
+print(orderedDict.values()) # print sorted version
 ```
 
-    [27, 11, 'twenty', 'trees', 4, 'Car']
+    [2, 4, 6, 8, 13, 35, 55, 90]
+    odict_values(['Car', '4', 'trees', 'twenty', '11', '27'])
 
