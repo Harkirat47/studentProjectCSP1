@@ -2,7 +2,7 @@
 toc: True
 comments: False
 layout: post
-title: Linux Shell and Bash
+title: MMHHHHHTastyONotations
 description: A Tech Talk on Linux and the Bash shell.
 type: hacks
 courses: {'compsci': {'week': 8}}
@@ -281,20 +281,8 @@ print(array)
 print(f"The median of the array is {statistics.median(array)}")    
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    ValueError                                Traceback (most recent call last)
-
-    /tmp/ipykernel_3098/2286129719.py in <module>
-          2 import statistics
-          3 
-    ----> 4 n = int(input("Enter array size"))
-          5 array = [None] * n # array with this size
-          6 
-
-
-    ValueError: invalid literal for int() with base 10: ''
+    ['1', '2', '3']
+    The median of the array is 2
 
 
 HW Part 2: This time instead of utilizing binary search to do it I want you to use linear search to get to the same value and I want you to output the number of iterations it took to get there. Aswell as a congrats message upon getting there points will be awarded upon creativity and completion.
