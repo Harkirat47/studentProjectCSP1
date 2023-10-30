@@ -191,7 +191,7 @@ Update, Huge issue, the data cannot be called, yet the api is on the AWS server,
 
 SSH to the AWS server 
 
-FIX THE NGINX BECAUSE PPL KEEP TURNING OFF THE SERVER
+FIX THE NGINX BECAUSE PPL KEEP TURNING OFF THE SERVER Credit:WILLIAM CHENG, I figured out how to get to the SSH, William figured out how to fix NGINx
 
 ![Another Image]({{site.baseurl}}/images/LESGOOOOO.png)
 
