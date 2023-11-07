@@ -461,4 +461,12 @@ By following these strategies and consistently working on improving my understan
 
 # Collaberation
 
-I was backend in my group and I did most of the work on it while my friends were 
+I was backend in my group and I did most of the work on it while my friends were doing the frontent
+
+## Things to do better next time
+
+    Assign more work for other people to do backend
+
+    Have the work more outsourced
+
+Admitting mistakes is a crucial part of the Agile methodology, and it's a step towards improvement. Recognizing that you took on too much work within the Agile framework is a valuable realization. In Agile, collaboration and delegation are key principles, ensuring that responsibilities are shared and distributed among the team members. To improve, you can refocus on the core principles of Agile, such as transparency, communication, and teamwork. Learn from your experience and strive to involve your team more effectively, allowing for shared ownership and responsibilities in future projects. This adjustment can lead to a more balanced workload and better outcomes in the spirit of Agile's iterative and collaborative approach.
