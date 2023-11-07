@@ -365,3 +365,100 @@ Honerable mentions:
 Fixing exposed Data ports
 [https://github.com/Harkirat47/ByteBuFOOOns/commit/dc4f9bdb07be7bd055e09af8d14303e0d10e52fa](https://github.com/Harkirat47/ByteBuFOOOns/commit/dc4f9bdb07be7bd055e09af8d14303e0d10e52fa)
 
+
+# Week 11
+
+MCQ Revisions
+
+- Queston 1, Replacing a variable in psudo code with temporary variable is extremely weird,
+
+
+## temp <= first
+## first <= seccond
+## seccond <= first
+
+Queston 3
+
+- Encryption for a bank, recipients private key is more important than sender.
+- Calling the phone number given in the e-mail and providing the personal information over the phone BAD
+
+Queston 14
+
+- when index is different, the correct answer is: This option is incorrect. The programs display different values.
+### output <= [1,2,3,4,5,6,7,8]
+### output <= [0,1,2,3,4,5,6,7]
+### DIFFERENT VALUES
+
+Queston 23
+
+- This option is incorrect. There are multiple paths from P to S (for example, P to S and P to Q to S).
+- This is a path queston, the answer is B as thre is only one path to P
+
+Queston 26
+
+- The code I selected does nothing,
+- SIMPLE MISTAKE, always call move right, and if the output does not work, move forward
+
+Queston 30
+
+- what does the coe really mean, it calls every time in the index
+
+Queston 35
+
+- This option is correct. Creative Commons licenses can be used by creators of digital music to specify how the samples can be used by others. A no-rights-reserved license allows others to freely make use of the samples.
+
+Queston 50
+
+-  It implements a linear search. Bianary search is not sequential, it takes mean and recusres it over and over again.
+
+Queston 52 
+
+- Also a linear search
+- First keep palindromes, then shorten, then sort
+
+Queston 55
+
+- The procedure returns false no matter what the input value is.
+
+Queston 58
+
+- I. The Internet can provide crowdsourcing participants access to useful tools, information, and professional knowledge. II. The speed and reach of the Internet can lower geographic barriers, allowing individuals from different locations to contribute to projects.
+
+Queston 65
+
+- remember what an or function is
+
+Queston 66 
+
+- The list will not run with low index at 10 starting
+
+
+
+
+
+# REFLECTION
+
+
+Certainly, here's some additional advice for improving my performance on AP CSP multiple-choice questions:
+
+Regular Practice: I should consistently practice solving various types of multiple-choice questions to get a better feel for the format and the types of questions that may appear on the AP CSP exam. This practice helps me become more familiar with common patterns and concepts tested in these questions.
+
+Review the Course Material: Going through the course material, notes, and textbooks is essential. Sometimes, the answers to MCQs can be found within the course content. A thorough understanding of the curriculum is crucial.
+
+Analyze Mistakes: After taking practice exams or mock quizzes, I should carefully review any mistakes I made. Understanding why I got a particular question wrong and learning from those mistakes is crucial for improvement.
+
+Understand the AP CSP Exam Format: Familiarizing myself with the structure of the AP CSP exam, including the number of questions, time constraints, and scoring, will help me better plan and manage my time during the test.
+
+Use Resources: There are numerous resources available, such as review books, online courses, and sample questions provided by the College Board. These can be incredibly helpful in preparing for the exam.
+
+Consider Group Study: Sometimes, discussing and solving problems with peers can provide new perspectives and insights. Collaborative study sessions can be very beneficial.
+
+Stay Calm and Focused: During the actual exam, it's important to remain calm and focused. If I encounter a challenging question, it's better to temporarily skip it and return later. Panicking can negatively impact my performance.
+
+Simulate Real Exam Conditions: When practicing, I should simulate the actual exam conditions as closely as possible, including timing myself to get a sense of what the real test experience will be like.
+
+By following these strategies and consistently working on improving my understanding of the subject matter, my problem-solving skills, and my test-taking abilities, I can increase my chances of success on the AP CSP multiple-choice questions.
+
+# Collaberation
+
+I was backend in my group and I did most of the work on it while my friends were 
