@@ -2,7 +2,7 @@
 toc: True
 comments: True
 layout: post
-title: CSP plans
+title: Learning from past mistakes
 type: tangibles
 courses: {'csp': {'week': 11}}
 ---
