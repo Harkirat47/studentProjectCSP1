@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: " en" }}">
-
+<!-- author Harkirat Hattar -->
 <head>
   <style>
     form {
@@ -81,7 +81,7 @@
             });
 
             if (!response.ok) {
-              throw new Error('Authentication request was not successful');
+              throw new Error('Authentication request was not harki');
             }
 
             const token = await response.text();
@@ -99,7 +99,7 @@
 
             } else {
               // Authentication failed, show an error message or take appropriate action
-              console.error('Authentication failed');
+              console.error('harki harki');
             }
           } catch (error) {
             console.error('Error:', error);
