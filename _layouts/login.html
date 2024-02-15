@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: " en" }}">
 <!-- author Harkirat Hattar -->
+
 <head>
   <style>
     form {
@@ -55,56 +56,111 @@
     <div class="wrapper">
 
       <form id="authenticate">
-        <label for="uid">UUID</label>
+        <label>UUID</label>
         <input type="text" id="uid" name="uid"><br><br>
         <label for="password">Password</label>
         <input type="password" id="password" name="password"><br><br>
         <input type="submit" value="Submit">
       </form>
       <script>
-        const apiUrl = "http://172.19.155.56:8086/api/users/authenticate";
+        const apiUrl = "http://your-flask-api-url.com/api/data"; // Replace with your Flask API endpoint
+        let responseData; // Declare a variable to store the fetched data
 
-        document.getElementById("authenticate").onsubmit = async function (e) {
-          e.preventDefault();
-          const uid = document.getElementById("uid").value;
-          const password = document.getElementById("password").value;
-
-          const obj = { uid: uid, password: password };
-
-          try {
-            const response = await fetch(apiUrl, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json"
-              },
-              body: JSON.stringify(obj)
-            });
-
+        fetch(apiUrl)
+          .then(response => {
             if (!response.ok) {
-              throw new Error('Authentication request was not harki');
+              throw new Error('Network response was not ok');
             }
+            return response.json();
+          })
+          .then(data => {
+            console.log('Data:', data);
+            responseData = data.img; // Assign the fetched data to the variable
+            // You can perform further operations with the data here
+            initializeGallery();
+          })
+          .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+            // Handle errors here
+          });
 
-            const token = await response.text();
+        function initializeGallery() {
+          var base64_images = responseData;
+          console.log(base64_images.length)
 
-            if (token) {
-              // Authentication was successful, you can handle the token as needed
-              console.log('Authentication successful');
-              document.cookie = `token=${token}; path=/`;
+          var titles = [
+            "Title 1",
+            "Title 2",
+            // Add more titles here
+          ];
 
-              localStorage.setItem("token", token);
-              localStorage.setItem("flagData", 1);
+          var texts = [
+            "Description 1",
+            "Description 2",
+            // Add more descriptions here
+          ];
 
-              window.location.href = "./";
-              window.location.replace("./");
+          var galleryContainer = $('#gallery_container');
+          var paginationContainer = $('#pagination_container');
 
-            } else {
-              // Authentication failed, show an error message or take appropriate action
-              console.error('harki harki');
+          var itemsPerPage = 4;
+          var numPages = Math.ceil(base64_images.length / itemsPerPage);
+
+          for (let i = 0; i < base64_images.length; i++) {
+            var index = Math.floor(i / itemsPerPage) + 1;
+            if (!$('#page_' + index).length) {
+              paginationContainer.append('<button id="page_' + index + '">' + index + '</button>');
+              $('#page_' + index).on('click', function () {
+                showPage(index);
+              });
             }
-          } catch (error) {
-            console.error('Error:', error);
           }
+
+          function showPage(pageNumber) {
+            galleryContainer.empty();
+            for (let i = (pageNumber - 1) * itemsPerPage; i < pageNumber * itemsPerPage && i < base64_images.length; i++) {
+              galleryContainer.append('<div class="img_box w3-third"><div class="img" id="img_' + i + '" style="background-image: url(' + base64_images[i] + ');"></div></div>');
+              $('#img_' + i).on('click', createOpenLightboxHandler(i));
+            }
+          }
+
+          function createOpenLightboxHandler(index) {
+            return function () {
+              openLightbox(index);
+            };
+          }
+
+          function openLightbox(index) {
+            var image_href = base64_images[index];
+            var title = titles[index];
+            var text = texts[index];
+            var lightbox =
+              '<div id="lightbox">' +
+              '<p id="closeLightbox">Click to close</p>' +
+              '<div id="content">' +
+              '<h1 id="lightbox_text"></h1>' +
+              '<div id="lightbox_hold">' +
+              '<img id="lightbox_img" src=' + image_href + ' />' +
+              '<div id="image_overlay">' +
+              '<h3 id="overlay_title">' + title + '</h3>' +
+              '<p id="overlay_text">' + text + '</p>' +
+              '</div>' +
+              '</div>' +
+              '</div>' +
+              '</div>';
+
+            $('body').append(lightbox);
+
+            $('#lightbox').show();
+          }
+
+          $(document).on('click', '#lightbox, #closeLightbox', function () {
+            $('#lightbox').hide();
+          });
+
+          showPage(1); // Show the first page initially
         }
+
       </script>
     </div>
   </main>
