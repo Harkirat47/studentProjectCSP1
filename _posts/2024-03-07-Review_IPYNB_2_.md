@@ -1,7 +1,7 @@
 ---
 toc: True
 comments: True
-layout: blogs
+layout: post
 title: Ind Review
 description: Blog for CSP week 19
 courses: {'csp': {'week': 25}}
