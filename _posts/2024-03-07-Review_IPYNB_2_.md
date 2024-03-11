@@ -25,7 +25,6 @@ type: hacks
 
 
 
-
-```python
 # this week, I focused mainly on planning. I contributed to help Ian Write the blog by creating the planning board and also by adding disigns as to where the machine learning goes. I also did some debuging.
-```
+
+
