@@ -18,7 +18,7 @@ type: hacks
 ### this is a breakpoint to check the endpoints of uploading in the backend, this is used to make sure that i can do a seperate post request to the jwt that IS NOT the authenticate.
 # 2 Endpoint break to see if works
 
-<img src="/home/withereddagger/vscode/studentProjectCSP1/images/9.png" alt="image9">
+<img src="../../../images/9.png" alt="image9">
 
 ### Breakpoint to see the conversion
 
