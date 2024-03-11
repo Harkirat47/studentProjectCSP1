@@ -10,8 +10,6 @@ type: hacks
 
 # Key Commits
 
-    https://github.com/Harkirat47/FrontEndCPTSCSS/commit/b25b2a1f8f4b4bc63cec5d2e289d12d35050ab68
-
     https://github.com/Harkirat47/FrontEndCPTSCSS/commit/b60a54da69f641434c98c0704eb276216eb0bf70
 
     https://github.com/Harkirat47/FrontEndCPTSCSS/commit/95ccf9fad1c427e4c67624c9f9252fd51d2cdfd8
@@ -27,4 +25,9 @@ type: hacks
 
 # this week, I focused mainly on planning. I contributed to help Ian Write the blog by creating the planning board and also by adding disigns as to where the machine learning goes. I also did some debuging.
 
+## Step 1
+
+### Make plans, With the help of adding more and more baxes to the jamboard on My frontend, We have abonafide plan with issues and abilities to review
+
+# https://github.com/users/Harkirat47/projects/1/views/1
 
