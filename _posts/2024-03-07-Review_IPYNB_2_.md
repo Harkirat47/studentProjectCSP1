@@ -31,3 +31,12 @@ type: hacks
 
 # https://github.com/users/Harkirat47/projects/1/views/1
 
+## Step 2 
+
+### find the dataset for the machine learning 
+
+https://www.kaggle.com/code/nethanael/mla2-phidalgo-proyecto-final-pt1
+
+https://www.kaggle.com/code/zyuniversal/starter-google-landmarks-dataset-1c58081d-4
+
+https://www.kaggle.com/datasets/google/google-landmarks-dataset/data
